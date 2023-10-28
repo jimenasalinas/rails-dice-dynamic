@@ -17,3 +17,8 @@ end
 Rails.application.routes.draw do
   get("/dice/5/4", { :controller => "five_four", :action => "roll_5_4" })
 end
+
+Rails.application.routes.draw do
+  
+  get("/dice/:number_of_dice/:how_many_sides", { :controller => "random", :action => "roll_random" }) 
+end
